@@ -13,7 +13,7 @@ class App extends React.Component {
       <div className="App">
         <AddTask sendSubmit={this.handleAddTask} />
         <hr />
-        <TaskList active={this.state.tasks} />
+        <TaskList active={this.state.tasks} handleDelete={this.deleteTask} />
       </div>
     );
   }
@@ -27,6 +27,13 @@ class App extends React.Component {
     this.counter++;
     this.setState((prevState) => {
       return prevState.tasks.push(task);
+    });
+  };
+  deleteTask = (id) => {
+    this.setState((prevState) => {
+      return {
+        tasks: prevState.tasks.filter((task) => task.id !== id),
+      };
     });
   };
 }

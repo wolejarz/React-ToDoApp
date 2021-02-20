@@ -18,3 +18,11 @@ input[type="checkbox"] {
   margin-left: 0;
   margin-right: 10px;
 }
+button {
+  margin-left: 20px;
+}
+.taskname {
+  font-weight: 800;
+  margin-right: 50px;
+  margin-left: 20px;
+}

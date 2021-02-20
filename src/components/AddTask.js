@@ -19,7 +19,7 @@ class AddTask extends Component {
           />
         </label>
         <label htmlFor="task">
-          Enter your task's date :
+          Enter your task's deadline :
           <input
             type="date"
             id="date"
@@ -50,14 +50,14 @@ class AddTask extends Component {
       });
     if (e.target.id === "date")
       this.setState({
-        date: e.target.value,
+        date: new Date(e.target.value),
       });
     if (e.target.id === "important")
       this.setState({
         important: e.target.checked,
       });
 
-    console.log(e.target);
+    //console.log(e.target);
   };
 
   handleSubmit = (e) => {
